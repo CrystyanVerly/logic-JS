@@ -36,19 +36,19 @@ O foco não é aprender a sintaxe da linguagem, mas praticar resolução de prob
 1. Clone o repositório:
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/CrystyanVerly/JavaScript-LogicTraining.git
 ```
 
 2. Entre na pasta do projeto:
 
 ```bash
-cd <nome-do-projeto>
+cd JavaScript-LogicTraining
 ```
 
 3. Execute um desafio:
 
 ```bash
-node desafios/desafio1.js
+npm start
 ```
 
 ou
