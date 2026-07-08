@@ -1,0 +1,68 @@
+# 🧠 Exercícios de Lógica com JavaScript
+
+Este repositório reúne os exercícios de lógica que estou resolvendo para desenvolver meu raciocínio lógico e aprimorar minhas habilidades em JavaScript.
+
+O foco não é aprender a sintaxe da linguagem, mas praticar resolução de problemas, algoritmos e estruturas de dados por meio de desafios.
+
+## Tecnologias
+
+- JavaScript (Node.js)
+- `readline` (módulo nativo do Node.js)
+
+## Objetivos
+
+- Desenvolver raciocínio lógico.
+- Melhorar a resolução de problemas.
+- Praticar algoritmos.
+- Escrever código mais limpo e legível.
+- Criar o hábito de resolver desafios diariamente.
+
+## Estrutura do projeto
+
+```text
+.
+├── desafios/
+│   ├── desafio1.js
+│   ├── desafio2.js
+│   └── ...
+├── index.js
+├── package.json
+├── .gitignore
+└── README.md
+```
+
+## Como executar
+
+1. Clone o repositório:
+
+```bash
+git clone <url-do-repositorio>
+```
+
+2. Entre na pasta do projeto:
+
+```bash
+cd <nome-do-projeto>
+```
+
+3. Execute um desafio:
+
+```bash
+node desafios/desafio1.js
+```
+
+ou
+
+```bash
+node index.js
+```
+
+## Observações
+
+- Os exercícios são feitos para fins de estudo.
+- Algumas soluções podem não ser as mais eficientes, pois o objetivo é acompanhar a evolução do aprendizado.
+- Conforme o conhecimento aumenta, soluções antigas podem ser revisitadas e refatoradas.
+
+---
+
+**Bons estudos e bons códigos! 🚀**
