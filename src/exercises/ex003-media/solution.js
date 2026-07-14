@@ -4,7 +4,7 @@ export default () => {
 	const n2 = Number(readline.question(`Insira um numero B:  `));
 
 	function media(n1, n2) {
-		const media = (n1 + n2) / 2;
+		const resultado = (n1 + n2) / 2;
 		console.log(`A media entre ${n1} e ${n2} é ${media.toFixed(2)}`);
 	}
 

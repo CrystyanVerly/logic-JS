@@ -4,7 +4,7 @@ export default () => {
 	const n2 = Number(readline.question(`Insira um numero B:  `));
 
 	function soma(a, b) {
-		const soma = a + b;
+		const resultado = a + b;
 		console.log(`${a} + ${b} = ${soma}`);
 		return soma;
 	}
