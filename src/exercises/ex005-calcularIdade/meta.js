@@ -1,6 +1,6 @@
 export default {
 	id: 5,
-	title: 'Existencia de triangulos',
+	title: 'Calcular idade',
 	difficulty: 'easy',
 	tags: ['Math'],
 	description:

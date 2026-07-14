@@ -1,23 +1,41 @@
 import fs from 'fs';
 import path from 'path';
-import { pathToFileURL, fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 export default async function loadExercises() {
 	const root = path.join(__dirname, 'exercises');
-	const dirs = fs
+
+	const directories = fs
 		.readdirSync(root, { withFileTypes: true })
-		.filter((d) => d.isDirectory())
-		.map((d) => d.name)
+		.filter((dir) => dir.isDirectory())
+		.map((dir) => dir.name)
 		.sort();
-	const list = [];
-	for (const d of dirs) {
-		const p = path.join(root, d);
-		const meta = (await import(pathToFileURL(path.join(p, 'meta.js')))).default;
-		const exercise = (await import(pathToFileURL(path.join(p, 'exercise.js'))))
-			.default;
-		const solution = (await import(pathToFileURL(path.join(p, 'solution.js'))))
-			.default;
-		list.push({ meta, exercise, solution });
+
+	const exercises = [];
+
+	for (const dir of directories) {
+		const folder = path.join(root, dir);
+
+		const { default: meta } = await import(
+			pathToFileURL(path.join(folder, 'meta.js'))
+		);
+
+		const { default: exercise } = await import(
+			pathToFileURL(path.join(folder, 'exercise.js'))
+		);
+
+		const { default: solution } = await import(
+			pathToFileURL(path.join(folder, 'solution.js'))
+		);
+
+		exercises.push({
+			meta,
+			exercise,
+			solution,
+		});
 	}
-	return list;
+
+	return exercises;
 }
